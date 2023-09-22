@@ -1,0 +1,20 @@
+version: "3.0"
+
+services:
+  redis:
+    image: redis
+    container_name: redis
+    ports:
+      - 127.0.0.1:6379:6379
+    volumes:
+      - $PWD/redis_data:/data
+      - $PWD/myredis.conf:/etc/redis/redis.conf
+    command:
+      redis-server --save 60 1 --requirepass 777777
+
+  redisinsight:  
+    image: redislabs/redisinsight
+    container_name: redisinsight
+    network_mode: "host"
+    # volumes:
+    #   - ./Users/ajeetraina/data/redisinsight:/db

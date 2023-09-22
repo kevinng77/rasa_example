@@ -1,0 +1,21 @@
+recipe: default.v1
+assistant_id: concert_bot
+language: en
+
+pipeline:
+  - name: "WhitespaceTokenizer"
+  - name: components.myintent.LanguageModelFeaturizer
+    model_name: kevinng77/TinyBERT_4L_312D_SIMCSE_finetune 
+  - name: components.sentiment_classifier.SentimentClassifier
+  - name: "DIETClassifier"
+    epochs: 100
+
+
+policies:
+  # - name: TEDPolicy
+  #   max_history: 5
+  #   epochs: 200
+  #   batch_size: 50
+  #   max_training_samples: 300
+  # - name: MemoizationPolicy
+  # - name: RulePolicy

@@ -1,0 +1,14 @@
+# 如果你在 vscode 上安装了 REST Client 插件，
+# 那么直接点击 ### 下方的 Send Request 就能看到结果了
+###
+POST http://localhost:5005/model/parse
+Content-Type: application/json
+
+{
+    "text":"what restaurants do you recomment?",
+    "sender": "test_user"
+}
+###
+GET http://localhost:5005/version
+
+# 更多的 API 可以参考 

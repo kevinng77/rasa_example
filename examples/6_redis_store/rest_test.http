@@ -1,0 +1,15 @@
+# 如果你在 vscode 上安装了 REST Client 插件，
+# 那么直接点击 ### 下方的 Send Request 就能看到结果了
+
+# 更多的 API 可以参考 
+### 
+POST http://localhost:5005/webhooks/rest/mywebhook
+Content-Type: application/json
+
+{
+  "sender": "test_user",  
+  "message": "hello"
+}
+###
+GET http://localhost:5005/webhooks/rest/
+ 

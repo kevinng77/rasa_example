@@ -1,0 +1,13 @@
+action_endpoint:
+  url: http://localhost:5055/webhook
+
+#nlg:
+#  url: http://localhost:5056/nlg
+tracker_store:
+    type: redis
+    url: 127.0.0.1
+    port: 6379
+    key_prefix: kevinstore
+    db: 0
+    password: 777777
+    # use_ssl: <whether or not the communication is encrypted, default `false`>

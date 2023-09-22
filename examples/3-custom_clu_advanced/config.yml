@@ -1,0 +1,28 @@
+recipe: default.v1
+assistant_id: concert_bot
+language: en
+
+pipeline:
+  - name: "WhitespaceTokenizer"
+  - name: "CountVectorsFeaturizer"
+  - name: RegexEntityExtractor
+    # text will be processed with case insensitive as default
+    case_sensitive: False
+    # use lookup tables to extract entities
+    use_lookup_tables: True
+    # use regexes to extract entities
+    use_regexes: True
+  # - name: components.myintent.LanguageModelFeaturizer
+  #   model_name: kevinng77/TinyBERT_4L_312D_SIMCSE_finetune 
+  - name: components.diet_cls.DIETClassifier
+    epochs: 100
+
+
+policies:
+  # - name: TEDPolicy
+  #   max_history: 5
+  #   epochs: 200
+  #   batch_size: 50
+  #   max_training_samples: 300
+  # - name: MemoizationPolicy
+  # - name: RulePolicy

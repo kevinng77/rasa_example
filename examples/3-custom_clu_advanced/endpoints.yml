@@ -1,0 +1,10 @@
+action_endpoint:
+  url: http://localhost:5055/webhook
+
+rest:
+#nlg:
+#  url: http://localhost:5056/nlg
+
+# 如果你运行的是一个 nlu + core 模型，那么你可以指定暴露 NLU API 服务
+# nlu:
+#     url: "http://localhost:6666/"

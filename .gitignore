@@ -1,0 +1,4 @@
+models
+.rasa
+__pycache__
+*.rdb
